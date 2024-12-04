@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 import { useFonts, Inter_400Regular, Inter_700Bold } from '@expo-google-fonts/inter';
+import { Theme } from './src/DesignSystem/theme';
+import { Home } from './src/Screens/home';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -9,7 +11,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {fontsLoaded ? <Text>Fonts OK</Text> : <ActivityIndicator size={50}/>}
+      {fontsLoaded ? <Home/> : <ActivityIndicator size={50}/>}
       <StatusBar style="auto" />
     </View>
   );
@@ -18,7 +20,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: Theme.colors.base.gray600,
     alignItems: 'center',
     justifyContent: 'center',
   },
