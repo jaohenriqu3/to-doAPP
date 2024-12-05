@@ -1,6 +1,8 @@
 import { View, Text } from "react-native";
 import { Styles } from "./style"; 
+
 import { Header } from "../Components/Header/header";
+import { Task } from "../Components/Task/task";
 
 export function Home(){
     return (
@@ -21,6 +23,9 @@ export function Home(){
                     </View>
                 </View>
             </View>
+            <Task/>
+            <Task/>
+            <Task/>
         </View>
     </View>
     )
