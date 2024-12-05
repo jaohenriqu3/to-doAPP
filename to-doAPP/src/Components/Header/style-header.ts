@@ -6,7 +6,7 @@ export const StyleHeader = StyleSheet.create({
 		backgroundColor: Theme.colors.base.gray700,
 		alignItems: 'center',
 		justifyContent: 'center',
-		width: 400,
+		width: '100%',
 		height: 173,
 		position: 'relative',
 	},
@@ -21,7 +21,7 @@ export const StyleHeader = StyleSheet.create({
 	},
 	input: {
 		height: 54,
-		width: '75%',
+		width: '80%',
 		backgroundColor: Theme.colors.base.gray500,
 		borderRadius: 5,
 		padding: 16,
