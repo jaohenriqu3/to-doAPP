@@ -41,7 +41,7 @@ Pré-requisitos: Docker instalado.
 
 Após clonar o repositório, execute os comandos:
 ```bash
-   docker build -t to-doAPP .
+docker build -t to-doAPP .
    ```
 
 ```bash
