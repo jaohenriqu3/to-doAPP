@@ -1,14 +1,14 @@
-# Use a imagem oficial do Node.js como base
 FROM node:20.11.0
 
 # Configurar o diretório de trabalho
-WORKDIR /app
+WORKDIR /to-doAPP
 
 # Copiar aqruivos para instalar dependências
 COPY package.json package-lock.json ./
 
 # Instalar dependências
-RUN npm install
+RUN npm install expo-cli --global  \ 
+npm run web
 
 # Copiar todos os arquivos do projeto para o contêiner
 COPY . .
