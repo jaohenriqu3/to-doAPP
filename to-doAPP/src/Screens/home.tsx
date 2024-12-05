@@ -23,7 +23,7 @@ export function Home(){
                     </View>
                 </View>
             </View>
-            <Task title="Exemple" isCompleted={false} />
+            <Task title="Exemple" isCompleted ={false} />
             <Task title="Exemple" isCompleted />
             <Task title="Exemple" isCompleted />
         </View>
