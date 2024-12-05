@@ -45,7 +45,7 @@ docker build -t to-doAPP .
    ```
 
 ```bash
-docker run -p 8081:8081 todo-list-app
+docker run -p 8081:8081 to-doAPP
    ```
 
 *A porta principal do container é a 8081.*
