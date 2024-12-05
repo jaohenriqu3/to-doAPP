@@ -23,9 +23,9 @@ export function Home(){
                     </View>
                 </View>
             </View>
-            <Task/>
-            <Task/>
-            <Task/>
+            <Task title="Exemple" isCompleted={false} />
+            <Task title="Exemple" isCompleted />
+            <Task title="Exemple" isCompleted />
         </View>
     </View>
     )

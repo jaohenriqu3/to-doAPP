@@ -3,19 +3,28 @@ import { StyleTask } from "./style-task"
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { Theme } from "../../DesignSystem/theme"
 
-export function Task(){
+import { TaskDTO } from "../../DTO/TaskDTO"
+
+export function Task( {title, isCompleted} : TaskDTO ){
     return (
         <View style={StyleTask.taskContainer}>
             <TouchableOpacity>
                 <MaterialCommunityIcons 
-                name="checkbox-marked-circle-outline" 
+                name={
+                    isCompleted
+                     ? "checkbox-marked-circle-outline" 
+                     : "checkbox-blank-circle-outline"
+                }
                 size={22} 
-                color={Theme.colors.brand.purple}
+                color={
+                    isCompleted
+                    ?Theme.colors.brand.purple
+                    :Theme.colors.brand.blue } 
                 />
             </TouchableOpacity>
 
             <View style={StyleTask.textContainer}>
-                <Text style={StyleTask.textDone}>Task exemple</Text>
+                <Text style={StyleTask.textDone}>{title}</Text>
             </View>
 
             <TouchableOpacity>
@@ -25,9 +34,6 @@ export function Task(){
                 color={Theme.colors.base.gray300}
                 />
             </TouchableOpacity>
-
-
-            
         </View>
     )
 }
