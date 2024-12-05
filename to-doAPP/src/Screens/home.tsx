@@ -1,5 +1,5 @@
-import { View, Text, FlatList, Alert} from "react-native";
-import { useState } from "react";
+import { View, Text, FlatList, Alert, TextInput} from "react-native";
+import { useState, useRef } from "react";
 
 import { Styles } from "./style"; 
 import { Header } from "../Components/Header/header";
@@ -11,7 +11,8 @@ import { uuid } from "../Utils/uuid";
 export function Home(){
     //States 
     const [Tasks, setTasks] = useState<TaskDTO[]>([])
-    const [NewTask, setNewTask] = useState('')
+    const [NewTask, setNewTask] = useState('') 
+    const newTaskInputRef = useRef<TextInput>(null)
 
     function handleTaskAdd(){ 
         if(NewTask !== '' && NewTask.length >= 5)
@@ -21,6 +22,8 @@ export function Home(){
          ])
 
          setNewTask('')
+
+         newTaskInputRef.current?.blur()
     } 
     
     function handleTaskDone(id: string) {
@@ -52,7 +55,9 @@ export function Home(){
 
     return (
     <View style={Styles.container}>
-        <Header task={NewTask} 
+        <Header
+        inputRef={newTaskInputRef}
+        task={NewTask} 
         onChangeText={setNewTask} 
         onPress={handleTaskAdd}/>
         <View style={Styles.tasksContainer}> 
