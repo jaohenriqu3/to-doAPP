@@ -40,7 +40,12 @@ Aplicativo para gestão de tasks desenvolvido em **TypeScript + React Native + D
 Pré-requisitos: Docker instalado.
 
 Após clonar o repositório, execute o comando:
-docker build -t to-doAPP .
-docker run -p 8081:8081 todo-list-app
+```bash
+   docker build -t to-doAPP .
+   ```
 
-A porta principal do container é a 8081.
+```bash
+docker run -p 8081:8081 todo-list-app
+   ```
+
+*A porta principal do container é a 8081.*
