@@ -1,6 +1,6 @@
 import { ActivityIndicator, View } from 'react-native'
 import { Theme } from '../../DesignSystem/theme'
-import { LoadingStyle } from './loading-style'
+import { LoadingStyle } from './style-loading'
 
 export function Loading() {
 	return (
