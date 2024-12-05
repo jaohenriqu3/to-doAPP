@@ -11,11 +11,11 @@ import { uuid } from "../Utils/uuid";
 export function Home(){
     //States 
     const [Tasks, setTasks] = useState<TaskDTO[]>([])
-    const [NewTask, setNewTask] = useState('') 
+    const [NewTask, setNewTask] = useState('')
     const newTaskInputRef = useRef<TextInput>(null)
 
     function handleTaskAdd(){ 
-        if(NewTask !== '' && NewTask.length >= 5)
+        if(NewTask !== '' && NewTask.length >= 0)
         setTasks((Tasks) => [
             ...Tasks,
             {id: uuid(), isCompleted: false, title: NewTask.trim()},
