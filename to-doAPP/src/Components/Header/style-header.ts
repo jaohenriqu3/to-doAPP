@@ -6,7 +6,7 @@ export const StyleHeader = StyleSheet.create({
 		backgroundColor: Theme.colors.base.gray700,
 		alignItems: 'center',
 		justifyContent: 'center',
-		width: '100%',
+		width: 400,
 		height: 173,
 		position: 'relative',
 	},

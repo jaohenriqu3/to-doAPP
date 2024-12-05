@@ -5,8 +5,6 @@ export const Styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: Theme.colors.base.gray600,
-        alignItems: 'center',
-        justifyContent: 'center',
 	},
     title: {
         color: Theme.colors.base.gray100,
