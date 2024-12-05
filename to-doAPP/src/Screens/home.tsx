@@ -4,12 +4,10 @@ import { Header } from "../Components/Header/header";
 import { Task } from "../Components/Task/task";
 import { useState } from "react";
 import { TaskDTO } from "../DTO/TaskDTO";
+import { Empty } from "../Components/Empty/empty";
 
 export function Home(){
     const [Tasks, setTask] = useState<TaskDTO[]>([
-        {id: '1', isCompleted: false, title: 'TEST'},
-        {id: '2', isCompleted: true, title: 'TEST'},
-        {id: '3', isCompleted: true, title: 'TEST'}
     ])
     return (
     <View style={Styles.container}>
@@ -40,8 +38,8 @@ export function Home(){
             title={item.title}
             />
             )}
+            ListEmptyComponent={<Empty/>}
          />
-
 
         </View>
     </View>
