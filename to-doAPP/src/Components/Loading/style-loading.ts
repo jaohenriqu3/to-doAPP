@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native'
 import { Theme } from '../../DesignSystem/theme'
 
-export const LoadingStyle = StyleSheet.create({
+export const StyleLoading = StyleSheet.create({
 	container: {
 		flex: 1,
 		alignItems: 'center',

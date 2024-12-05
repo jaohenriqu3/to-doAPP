@@ -1,10 +1,10 @@
 import { ActivityIndicator, View } from 'react-native'
 import { Theme } from '../../DesignSystem/theme'
-import { LoadingStyle } from './style-loading'
+import { StyleLoading } from './style-loading'
 
 export function Loading() {
 	return (
-		<View style={LoadingStyle.container}>
+		<View style={StyleLoading.container}>
 			<ActivityIndicator size={50} color={Theme.colors.brand.blue} />
 		</View>
 	)
