@@ -4,7 +4,13 @@ import Logo from '../../Assets/tasky.png'
 import { Theme } from "../../DesignSystem/theme";
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
-export function Header(){
+type HeaderProps = {
+    task: string;
+    onChangeText: (task: string) => void; 
+    onPress: () => void; 
+}
+
+export function Header({ task, onChangeText, onPress }: HeaderProps) {
     return(
         <View style={StyleHeader.headerContainer}>
             <Image source={Logo} />
@@ -12,8 +18,10 @@ export function Header(){
                 <TextInput style={StyleHeader.input} 
                 placeholder="Adicione uma nova tarefa" 
                 placeholderTextColor={Theme.colors.base.gray300}
+                value={task} 
+                onChangeText={onChangeText}
                 />
-                <TouchableOpacity style={StyleHeader.button} >
+                <TouchableOpacity style={StyleHeader.button} onPress={onPress} >
                     <MaterialCommunityIcons name="plus-circle-outline" 
                      size={24} color={Theme.colors.base.gray100} >
                     </MaterialCommunityIcons>
