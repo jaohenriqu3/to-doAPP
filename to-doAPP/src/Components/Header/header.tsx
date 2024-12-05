@@ -3,6 +3,7 @@ import { StyleHeader } from "./style-header";
 import Logo from '../../Assets/tasky.png'
 import { Theme } from "../../DesignSystem/theme";
 import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { Task } from "../Task/task";
 
 type HeaderProps = {
     task: string;
@@ -16,7 +17,8 @@ export function Header({ task, inputRef, onChangeText, onPress }: HeaderProps) {
         <View style={StyleHeader.headerContainer}>
             <Image source={Logo} />
             <View style={StyleHeader.form}>
-                <TextInput style={[StyleHeader.input, inputRef.current?.isFocused() ? StyleHeader.inputBorder : null]} 
+                <TextInput style={[StyleHeader.input, inputRef.current?.isFocused() && task      
+                ? StyleHeader.inputBorder : null]} 
                 placeholder="Adicione uma nova tarefa" 
                 placeholderTextColor={Theme.colors.base.gray300}
                 value={task} 
